@@ -1,0 +1,92 @@
+/* Background and main container */
+.app-container {
+  background-color: #f9fafb; /* gray-50 */
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.125rem; /* text-lg */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  height: 30px; /* fixed height */
+}
+
+
+.navbar-right img {
+  width: 36px; 
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Main content padding */
+.main-content {
+  padding: 1.5rem;
+}
+
+/* Header + Tabs */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb; /* gray-200 */
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-button:hover {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+/* Grid for charts */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Chart cards */
+.chart-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  padding: 1rem;
+}

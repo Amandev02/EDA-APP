@@ -1,0 +1,30 @@
+/* Header + Tabs */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: bold;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb; /* gray-200 */
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tab-button:hover {
+  background-color: #d1d5db; /* gray-300 */
+}
