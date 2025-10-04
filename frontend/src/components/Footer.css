@@ -1,0 +1,24 @@
+.footer {
+  background-color: #f3f4f6; /* light gray */
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e5e7eb; /* subtle top border */
+  font-size: 0.875rem; /* small text */
+  color: #6b7280; /* gray-600 */
+}
+
+.footer a {
+  color: #3b82f6; /* blue link */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
