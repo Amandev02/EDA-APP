@@ -1,4 +1,9 @@
 /* Grid for charts */
+
+.chad{
+  width: 100%;
+  min-width: 400px;
+}
 .charts-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
