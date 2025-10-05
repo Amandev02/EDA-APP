@@ -25,4 +25,7 @@ urlpatterns = [
     path('api/monthly-trend/', views.monthly_trend),
     path('api/market-share/', views.market_share_by_brand),
     path('api/filter-options/', views.filter_options),
+    path('api/brand-trend/', views.brand_trend, name='brand-trend'),
+    path('api/yoy-growth/', views.yoy_growth, name='yoy-growth'),
+
 ]

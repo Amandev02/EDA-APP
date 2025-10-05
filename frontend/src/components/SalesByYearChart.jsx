@@ -28,24 +28,37 @@ export default function SalesByYearChart({ filters }) {
     total_sales: row.total_sales ?? row.sales_value ?? 0,
   }));
 
-   if (!chartData.length) {
-    return <div>No market-share data available for the selected filters.</div>;
+  if (!chartData.length) {
+    return <div>No yearly sales data available for the selected filters.</div>;
   }
-
 
   return (
     <div className="card">
       <h4>Sales By Year</h4>
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={chartData}>
+        <BarChart
+          data={chartData}
+          margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+        >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="year" />
-           <YAxis
-      tickFormatter={(value) => (value >= 1000000 ? `${value / 1000000}M` : value)}
-    />
-          <Tooltip />
+          <YAxis
+            tickFormatter={(value) =>
+              value >= 1000000
+                ? `${(value / 1000000).toFixed(1)}M`
+                : value >= 1000
+                ? `${(value / 1000).toFixed(0)}k`
+                : value
+            }
+          />
+          <Tooltip formatter={(v) => `${v.toLocaleString()}`} />
           <Legend />
-          <Bar dataKey="total_sales" name="Total Sales" fill="#3B82F6" />
+          <Bar
+            dataKey="total_sales"
+            name="Total Sales"
+            fill="#3B82F6"
+            radius={[6, 6, 0, 0]} // rounded top corners
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
